@@ -14,5 +14,7 @@ module.exports = {//서버들끼리의 원활한 소통을 위해서 응답메�
     CURATOR_SELECT_FAIL: "큐레이터 선택 실패",
     CURATOR_SELECT_FAIL: "큐레이터 선택 성공",
 
-
+    BOOK_INSERT_FAIL:"book insert fail",
+    BOOK_INSERT_SUCCESS:"book insert success",
+    
 };
