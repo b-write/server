@@ -16,5 +16,7 @@ module.exports = {//서버들끼리의 원활한 소통을 위해서 응답메�
 
     BOOK_INSERT_FAIL:"book insert fail",
     BOOK_INSERT_SUCCESS:"book insert success",
-    
+
+    MAIN_FAIL:"main 불러오기 실패",
+    MAIN_SUCCESS:"main 불러오기 성공!",
 };
