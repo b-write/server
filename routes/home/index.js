@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-router.use('/book', require('./book'));
+router.use('/', require('./book'));
 router.use('/curator', require('./curator'));
+router.use('/main', require('./main'));
 
 module.exports = router;
