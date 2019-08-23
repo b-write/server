@@ -6,6 +6,7 @@ const util = require('../../module/utils');
 const statusCode = require('../../module/statusCode');
 const resMessage = require('../../module/responseMessage');
 
+//postman에서 잘 안됨...한글때문?
 router.get('/:name', async(req, res) => {
     try{
         // const curator = req.params.curatorIdx;
