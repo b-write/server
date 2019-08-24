@@ -13,7 +13,7 @@ const resMessage = require('../../module/responseMessage');
 //ORDER BY RAND() LIMIT 3
 
 router.get('/', async(req, res)=>{
-    const getBookQuery = 'SELECT bookIdx, title, author, book_image FROM book ORDER BY RAND() LIMIT 3';//3개 랜덤 추출
+    const getBookQuery = 'SELECT bookIdx, title, author, book_image FROM book ORDER BY RAND() LIMIT 6';//3개 랜덤 추출
     const getCuratorQuery = 'SELECT name, job, curator_image, curator_intro, book_image FROM curator JOIN book ON curator.bookIdx = book.bookIdx';//메인에서 책은 이미지만 필요
     const getQuestionQuery = 'SELECT questionIdx, question_content, question_likes, book_image FROM question JOIN book ON question.bookIdx = book.bookIdx ORDER BY question_likes DESC LIMIT 3';//질문 좋아요 수 상위3개 추출
 

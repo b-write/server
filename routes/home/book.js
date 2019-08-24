@@ -43,10 +43,13 @@ router.get('/search/book', function(req, res) {
                 book_json.author = author;
                 book_json.summary = summary;
                 book_json.book_image = book_image;
-                book_result.push(book_json);
+                // book_result.push(book_json);
                 if(insertBookResult.length == 0){//실패
+                    //bookIdx보여주기
                     res.status(200).send(util.successFalse(statusCode.OK, resMessage.BOOK_INSERT_FAIL));
                 }else{
+                    book_json.bookIdx = insertBookResult['insertId'];
+                    book_result.push(book_json);
                     res.status(200).send(util.successTrue(statusCode.OK, resMessage.BOOK_INSERT_SUCCESS, book_result));
                 }
             } else {
