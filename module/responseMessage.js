@@ -14,9 +14,15 @@ module.exports = {//서버들끼리의 원활한 소통을 위해서 응답메�
     CURATOR_SELECT_FAIL: "큐레이터 선택 실패",
     CURATOR_SELECT_FAIL: "큐레이터 선택 성공",
 
-    BOOK_INSERT_FAIL:"book insert fail",
-    BOOK_INSERT_SUCCESS:"book insert success",
+    QUESTION_UPLOAD_SUCCESS: "질문 등록 성공",
+    QUESTION_UPLOAD_FAIL: "질문 등록 실패",
+    QUESTION_VIEW_SUCCESS: "질문 등록 화면 가져오기 성공",
+    QUESTION_VIEW_FAIL: "질문 등록 화면 가져오기 실패",
+
+    ANSWER_UPLOAD_SUCCESS: "답변 등록 성공",
+    ANSWER_UPLOAD_FAIL: "답변 등록 실패",
 
     MAIN_FAIL:"main 불러오기 실패",
     MAIN_SUCCESS:"main 불러오기 성공!",
+
 };
