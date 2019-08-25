@@ -35,7 +35,6 @@ router.post('/', upload.single('user_image'), async (req, res) => {
             }
         }
     } else {//id중복
-        // console.log("중복된 email이 있습니다.");
         res.status(200).send(util.successFalse(statusCode.OK, resMessage.SIGNUP_FAIL));
     }
 });
