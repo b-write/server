@@ -40,6 +40,9 @@ module.exports = {//서버들끼리의 원활한 소통을 위해서 응답메�
     BOOK_QUESTION_TAB_SUCCESS:"책 질문 탭 불러오기 성공!",
 
     MY_QUESTION_LIST_SUCCESS:"나의 질문 리스트 가져오기 성공",
-    My_QUESTION_LIST_FAIL: "나의 질문 리스트 가져오기 실패"
+    My_QUESTION_LIST_FAIL: "나의 질문 리스트 가져오기 실패",
+
+    QUESTION_LOAD_FAIL:"질문 클릭시 로드 실패",
+    QUESTION_LOAD_SUCCESS:"질문 클릭시 로드 성공!",
 
 };
