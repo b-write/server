@@ -37,15 +37,15 @@ router.get('/', authUtil.isLoggedin, async(req, res) => {
 		let userFinishListResult = null;
 
 		const selectTransaction = await db.Transaction(async(connection) => {
-			dailyQuestionResult = await db.queryParam_Parse(selectMyQuestionListQuery, [ req.decoded.idx ]);
+			dailyQuestionResult = await db.queryParam_Parse(selectDailyQuestionQuery, [ req.decoded.idx ]);
 			userFinishListResult = await db.queryParam_Parse(selectUserFinishListQuery, [req.decoded.idx]);
 		});
 		if(selectTransaction == 0){
 			res.status(200).send(util.successFalse(statusCode.DB_ERROR, resMessage.My_QUESTION_LIST_FAIL));
 		}else{
-			const Result = [];
-
-			questionResult.push(questionCountResult);
+			const questionResult = [];
+			questionResult.push(dailyQuestionResult, userFinishListResult);
+			res.status(200).send(util.successTrue(statusCode.OK, resMessage.MY_QUESTION_LIST_SUCCESS, questionResult));
 		}
 		
 
