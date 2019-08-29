@@ -24,7 +24,7 @@ router.post('/', async (req, res) => {
     if(selectTransaction == 0){//트랜잭션 실패
         res.status(200).send(util.successFalse(statusCode.OK, resMessage.QUESTION_LOAD_FAIL));
     }else{//트랜잭션 성공
-        getQuestionResult[0]['answer_num'] = getAnswerNumResult[0]['count(*)'];
+        getQuestionResult[0].answer_num = getAnswerNumResult[0]['count(*)'];
         const question_result=[];
         question_result.push(getQuestionResult[0]);
         for(var i=0; i<getAnswerResult.length; i++){
