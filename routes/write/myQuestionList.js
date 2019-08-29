@@ -6,6 +6,7 @@ const statusCode = require('../../module/statusCode');
 const resMessage = require('../../module/responseMessage');
 const authUtil = require('../../module/authUtils');
 const jwt = require('../../module/jwt');
+const moment = require('moment')
 
 
 //나의 질문 함
@@ -68,7 +69,7 @@ router.get('/', authUtil.isLoggedin, async(req, res) => {
 					book_image : myQuestionListResult[i].book_image,
 					author : myQuestionListResult[i].author,
 					question_content : myQuestionListResult[i].question_content,
-					question_date : myQuestionListResult[i].question_date,
+					question_date : moment(myQuestionListResult[i].question_date).add(9, 'hours').format('YYYY.MM.DD'),
 					question_likes : myQuestionListResult[i].question_likes,
 					answerCount : myQuestionLikesResult[i].answerCount
 					})

@@ -25,7 +25,7 @@ module.exports = {//서버들끼리의 원활한 소통을 위해서 응답메�
     ANSWER_UPLOAD_SUCCESS: "답변 등록 성공",
     ANSWER_UPLOAD_FAIL: "답변 등록 실패",
     ANSWER_VIEW_SUCCESS:"답변 등록 화면 가져오기 성공",
-    ANSWER_VIEW_SUCCESS:"답변 등록 화면 가져오기 실패",
+    ANSWER_VIEW_FAIL:"답변 등록 화면 가져오기 실패",
 
     MAIN_FAIL:"main 불러오기 실패",
     MAIN_SUCCESS:"main 불러오기 성공!",
