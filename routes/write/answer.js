@@ -30,9 +30,9 @@ router.post('/', async(req, res) => {
 });
 
 //답변 등록 화면
-router.get('/:questionIdx', async(req, res) => {
+router.get('/', async(req, res) => {
 	try{		
-		const {questionIdx} = req.query
+		const { questionIdx } = req.query
 
 		const selectAnswerViewQuery = `
 		SELECT
