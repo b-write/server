@@ -8,13 +8,13 @@ const resMessage = require('../../module/responseMessage');
 const db = require('../../module/pool');
 const jwtUtils = require('../../module/jwt');
 
-//body-id, pw
+//body-email, pw
 router.post('/', async(req, res) => {
-    if (!req.body.id || !req.body.pw) {
+    if (!req.body.email || !req.body.pw) {
         res.status(200).send(util.successFalse(statusCode.BAD_REQUEST, resMessage.NULL_VALUE));
     } else {
-        const selectUserQuery = 'SELECT * FROM user WHERE id = ?'
-        const selectUserResult = await db.queryParam_Parse(selectUserQuery, [req.body.id]);
+        const selectUserQuery = 'SELECT * FROM user WHERE email = ?'
+        const selectUserResult = await db.queryParam_Parse(selectUserQuery, [req.body.email]);
         if(selectUserResult.length == 0){//해당 id을 가진 사용자 없음
             res.status(200).send(util.successFalse(statusCode.OK, resMessage.NO_USER));
         }else{

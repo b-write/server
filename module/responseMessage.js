@@ -41,7 +41,14 @@ module.exports = {//서버들끼리의 원활한 소통을 위해서 응답메�
 
     MY_QUESTION_LIST_SUCCESS:"나의 질문 리스트 가져오기 성공",
     My_QUESTION_LIST_FAIL: "나의 질문 리스트 가져오기 실패",
-    MY_QUESTION_MODIFY_SUCCESS:"나의 질문 수정하기 성공",
-    MY_QUESTION_MODIFY_FAIL: "나의 질문 수정하기 실패"
+
+    QUESTION_LOAD_FAIL:"질문 클릭시 로드 실패",
+    QUESTION_LOAD_SUCCESS:"질문 클릭시 로드 성공!",
+
+    WISH_INSERT_FAIL:"읽고 싶어요 누르기 실패",
+    WISH_INSERT_SUCCESS:"읽고 싶어요 누르기 성공!",
+
+    WISH_DELETE_FAIL:"읽고 싶어요 지우기 실패",
+    WISH_DELETE_SUCCESS:"읽고 싶어요 지우기 성공!",
 
 };
