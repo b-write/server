@@ -51,4 +51,10 @@ module.exports = {//서버들끼리의 원활한 소통을 위해서 응답메�
     WISH_DELETE_FAIL:"읽고 싶어요 지우기 실패",
     WISH_DELETE_SUCCESS:"읽고 싶어요 지우기 성공!",
 
+    Finish_INSERT_FAIL:"다 읽었어요 누르기 실패",
+    Finish_INSERT_SUCCESS:"다 읽었어요 누르기 성공!",
+
+    Finish_DELETE_FAIL:"다 읽었어요 지우기 실패",
+    Finish_DELETE_SUCCESS:"다 읽었어요 지우기 성공!",
+
 };
