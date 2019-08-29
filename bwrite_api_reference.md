@@ -79,3 +79,51 @@ result:
 }
 ```
 
+## 질문 등록하기
+
+url : /write/question
+
+method : POST
+
+header : 
+
+> body
+
+```java
+{
+    question_content: "String",
+    userIdx: int,
+    bookIdx: int
+}
+```
+
+> response
+
+```java
+성공 = 200
+{
+    "status": 200,
+    "success": true,
+    "message": "질문 등록 성공",
+    "data": {
+        "fieldCount": 0,
+        "affectedRows": 1,
+        "insertId": 16,
+        "serverStatus": 2,
+        "warningCount": 0,
+        "message": "",
+        "protocol41": true,
+        "changedRows": 0
+    }
+}
+
+실패 
+- body값에 NULL값이 있을 때
+{
+    "status": 204,
+    "success": false,
+    "message": "질문 등록 실패"
+}
+
+```
+
