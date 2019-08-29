@@ -32,20 +32,25 @@ router.post('/', async(req, res) => {
 //답변 등록 화면
 router.get('/:questionIdx', async(req, res) => {
 	try{		
-		const {questionIdx} = req.query
+		const { questionIdx } = req.params
 
 		const selectAnswerViewQuery = `
 		SELECT
 			q.question_content, b.title, b.author, b.book_image
 		FROM
-			book b, question q, answer a
+			question q, book b, answer a
 		WHERE
-			b.bookIdx = a.bookIdx and q.questionIdx = a.questionIdx and q.questionIdx = ?
+			a.bookIdx = b.bookIdx and a.bookIdx = q.bookIdx and q.questionIdx = ?
 		`
 		const answerViewResult = await db.queryParam_Parse(selectAnswerViewQuery, [ questionIdx ]);
-		res.status(200).send(util.successTrue(statusCode.OK, resMessage.ANSWER_VIEW_SUCCESS, answerViewResult));
-    console.log(answerViewResult);
-
+		console.log(answerViewResult);
+		if (answerViewResult == 0) {
+			res.status(200).send(util.successFalse(statusCode.NO_CONTENT, resMessage.ANSWER_VIEW_FAIL));
+		} else {
+				res.status(200).send(util.successTrue(statusCode.OK, resMessage.ANSWER_VIEW_SUCCESS, answerViewResult));
+		}
+		//res.status(200).send(util.successTrue(statusCode.OK, resMessage.ANSWER_VIEW_SUCCESS, answerViewResult));
+	
 	}catch(err){
 		console.log(err);
 	}

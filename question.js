@@ -30,9 +30,9 @@ router.post('/', async(req, res) => {
 });
 
 //질문 등록 화면
-router.get('/:bookIdx', async(req, res) => {
+router.get('/', async(req, res) => {
   try{
-      const { bookIdx } = req.params
+      const { bookIdx } = req.query
       
       const selectBookInfoQuery = `
       SELECT
@@ -49,7 +49,7 @@ router.get('/:bookIdx', async(req, res) => {
             res.status(200).send(util.successFalse(statusCode.NO_CONTENT, resMessage.QUESTION_VIEW_FAIL));
         } else {
             res.status(200).send(util.successTrue(statusCode.OK, resMessage.QUESTION_VIEW_SUCCESS, bookInfoResult));
-      }
+        }
       
   }catch(err){
       console.log(err);
